@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RomanNumbersCalculator.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="RomanNumbersCalculator.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Height="300"
+        Width="300"
+        Title="RomanNumbersCalculator">
+
+  <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="75,*,*,*,*">
+	<Button Name="Plus" Command="{ Binding Operation}" CommandParameter="+" Content="+" Grid.Column="1" Grid.Row="2" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="MintCream" BorderBrush="Black"  BorderThickness="5"/>
+	<Button Name="Minus" Command="{ Binding Operation}" CommandParameter="-" Content="-" Grid.Column="2" Grid.Row="2" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="MintCream" BorderBrush="Black"  BorderThickness="5"/>
+	<Button Name="Del" Command="{ Binding Operation}" CommandParameter="/" Content="/" Grid.Column="1" Grid.Row="1" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="MintCream" BorderBrush="Black"  BorderThickness="5"/>
+	<Button Name="Umno" Command="{ Binding Operation}" CommandParameter="*" Content="*" Grid.Column="0" Grid.Row="1" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="MintCream" BorderBrush="Black"  BorderThickness="5"/>
+    <TextBox Text="{Binding MainText}" IsUndoEnabled="False" Focusable="False" Height="75" VerticalAlignment="Top" Grid.ColumnSpan="4"  Grid.Row="0" FontSize="20" BorderBrush="Black"  BorderThickness="2"></TextBox>
+    <Button Name="Delete" Command="{ Binding Clear}"  Content="~" Grid.ColumnSpan="2" Grid.Column="2" Grid.Row="1" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="WhiteSmoke" BorderBrush="Black"  BorderThickness="5"/>
+    <Button Name="I" Command="{ Binding Char}" CommandParameter="I" Content="I" Grid.Column="0" Grid.Row="4" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+	<Button Name="V" Command="{ Binding Char}" CommandParameter="V" Content="V" Grid.Column="1" Grid.Row="4" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+	<Button Name="X" Command="{ Binding Char}" CommandParameter="X" Content="X" Grid.Column="2" Grid.Row="4" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+    <Button Name="L" Command="{ Binding Char}" CommandParameter="L" Content="L" Grid.Column="0" Grid.Row="3" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+    <Button Name="c" Command="{ Binding Char}" CommandParameter="C" Content="C" Grid.Column="1" Grid.Row="3" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+	<Button Name="D" Command="{ Binding Char}" CommandParameter="D" Content="D" Grid.Column="2" Grid.Row="3" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+    <Button Name="M" Command="{ Binding Char}" CommandParameter="M" Content="M" Grid.Column="0" Grid.Row="2" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Beige" BorderBrush="Black"  BorderThickness="5"/>
+    <Button Name="Ravno" Command="{ Binding Calculate}" Content="=" Grid.RowSpan="3" Grid.Column="3" Grid.Row="2" FontSize="20" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="Gray" BorderBrush="Black"  BorderThickness="5"/>
+  </Grid>
+</Window>
